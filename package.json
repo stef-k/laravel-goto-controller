@@ -10,17 +10,20 @@
     "categories": [
         "Other"
     ],
+    "galleryBanner": {
+        "color": "#FF5442",
+        "theme": "light"
+    },
     "activationEvents": [
         "*"
     ],
+    "icon": "images/icon.png",
     "main": "./out/extension",
     "contributes": {
-        "commands": [
-            {
-                "command": "extension.sayHello",
-                "title": "Hello World"
-            }
-        ]
+        "commands": [{
+            "command": "extension.sayHello",
+            "title": "Hello World"
+        }]
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
@@ -34,5 +37,14 @@
         "vscode": "^1.1.6",
         "@types/node": "^7.0.43",
         "@types/mocha": "^2.2.42"
-    }
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/stef-k/laravel-goto-controller.git"
+    },
+    "bugs": {
+        "url": "https://github.com/stef-k/laravel-goto-controller/issues"
+    },
+    "homepage": "https://github.com/codingyu/laravel-goto-view/blob/master/README.md"
 }
