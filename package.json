@@ -1,7 +1,7 @@
 {
     "name": "laravel-goto-controller",
     "displayName": "laravel-goto-controller",
-    "description": "Control click to navigation to the respective controller action from a route",
+    "description": "Alt + click to navigate from a route to a respective controller file",
     "version": "0.0.1",
     "publisher": "stef-k",
     "engines": {
@@ -11,7 +11,7 @@
         "Other"
     ],
     "galleryBanner": {
-        "color": "#FF5442",
+        "color": "#FF544A",
         "theme": "light"
     },
     "activationEvents": [
@@ -19,12 +19,6 @@
     ],
     "icon": "images/icon.png",
     "main": "./out/extension",
-    "contributes": {
-        "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
-        }]
-    },
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
