@@ -41,7 +41,7 @@ export class LinkProvider implements DocumentLinkProvider {
     if (lineNum != -1)
         path += "#" + lineNum;
 
-    link.target = Uri.parse("file:///" + path);
+    link.target = Uri.parse("file:" + path);
     return link;
   }
 }
