@@ -25,7 +25,13 @@ export function getFilePath(text: string, document: TextDocument) {
   let filePath = workspace.getWorkspaceFolder(document.uri).uri.fsPath + '/app/Http/Controllers';
   // split the method (if not a resource controller) from the controller name
   let controllerFileName = text.replace(/\./g, '/').replace(/\"|\'/g, '') + '.php';
+
+  if (controllerFileName.includes('\\')) {
+    controllerFileName = controllerFileName.replace(/\\/g, '\/');
+  }
+
   let targetPath = filePath + '/' + controllerFileName;
+
   if (fs.existsSync(targetPath)) {
     return targetPath;
   }
