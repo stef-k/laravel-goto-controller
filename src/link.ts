@@ -17,8 +17,20 @@ export class LinkProvider implements DocumentLinkProvider {
       if (result != null) {
         for (let item of result) {
           let splitted = item.replace(/\"|\'/g, '').split('@');
-          if (splitted.length != 2) continue;
+          if (splitted.length != 2) {
+            //Search for the Controller keyword in the string name
+            if (splitted[0].includes('Controller')) {
+              //In this case, because there is no method definition in routes 
+              //we send it to the index method by default
+              splitted[1] = 'index';
+            } else {
+              continue;
+            }
+          }
+          
           let filePath = util.getFilePath(splitted[0], document);
+
+
           if (filePath != null) {
             let start = new Position(line.lineNumber, line.text.indexOf(item) + 1);
             let end = start.translate(0, item.length - 2);
