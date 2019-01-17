@@ -1,5 +1,10 @@
 # Change Log
 
+## January, 17 2019, v0.0.5
+
+Correction with resource controller detection, and controller with subfolder in name, credits: @tnatanael
+Contributor: https://github.com/tnatanael
+
 ## July, 01 2018, v0.0.4
 
 Correct package dependencies
