@@ -22,7 +22,9 @@ export class LaravelControllerLink extends DocumentLink {
  * @param document
  */
 export function getFilePath(text: string, document: TextDocument) {
-  let filePath = workspace.getWorkspaceFolder(document.uri).uri.fsPath + '/app/Http/Controllers';
+  let pathCtrl = '/app/Http/Controllers'; // initial pathController value in package.json
+  pathCtrl = vscode_1.workspace.getConfiguration('laravel_goto_controller').pathController; // default settings or user settings
+  let filePath = vscode_1.workspace.getWorkspaceFolder(document.uri).uri.fsPath + pathCtrl;
   // split the method (if not a resource controller) from the controller name
   let controllerFileName = text.replace(/\./g, '/').replace(/\"|\'/g, '') + '.php';
 
