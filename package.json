@@ -43,5 +43,18 @@
     "bugs": {
         "url": "https://github.com/stef-k/laravel-goto-controller/issues"
     },
-    "homepage": "https://github.com/codingyu/laravel-goto-view/blob/master/README.md"
+    "homepage": "https://github.com/codingyu/laravel-goto-view/blob/master/README.md",
+    "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "Laravel goto controller configuration",
+            "properties": {
+                "laravel_goto_controller.pathController": {
+                    "type": "string",
+                    "default": "/app/Http/Controllers",
+                    "description": "Root path to the controllers folder"
+                }
+            }
+        }
+    }
 }
