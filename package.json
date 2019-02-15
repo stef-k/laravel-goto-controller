@@ -2,7 +2,7 @@
     "name": "laravel-goto-controller",
     "displayName": "laravel-goto-controller",
     "description": "Alt + click to navigate from a route to a respective controller file",
-    "version": "0.0.4",
+    "version": "0.0.6",
     "publisher": "stef-k",
     "engines": {
         "vscode": "^1.18.0"
@@ -43,7 +43,7 @@
     "bugs": {
         "url": "https://github.com/stef-k/laravel-goto-controller/issues"
     },
-    "homepage": "https://github.com/codingyu/laravel-goto-view/blob/master/README.md",
+    "homepage": "https://github.com/stef-k/laravel-goto-controller/blob/master/README.md",
     "contributes": {
         "configuration": {
             "type": "object",

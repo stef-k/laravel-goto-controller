@@ -1,5 +1,12 @@
 # Change Log
 
+## February, 15 2019
+
+* Ignore vsix files
+* read path to folder controllers from user config or default
+
+Contributor: https://github.com/masterrjj24
+
 ## January, 17 2019, v0.0.5
 
 * Npm packages vulnerabilities fixes
