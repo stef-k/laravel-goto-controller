@@ -2,7 +2,7 @@
     "name": "laravel-goto-controller",
     "displayName": "laravel-goto-controller",
     "description": "Alt + click to navigate from a route to a respective controller file",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "publisher": "stef-k",
     "engines": {
         "vscode": "^1.18.0"
@@ -30,7 +30,7 @@
         "@types/mocha": "^2.2.42",
         "@types/node": "^7.0.43",
         "typescript": "^2.6.1",
-        "vscode": "^1.1.26"
+        "vscode": "^1.1.33"
     },
     "dependencies": {
         "n-readlines": "^1.0.0"
