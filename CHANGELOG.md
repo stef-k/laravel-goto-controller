@@ -1,5 +1,9 @@
 # Change Log
 
+## September, 04 2020
+
+* Support for Laravel 8.0 controllers PHP `Classname::class` notation
+
 ## February, 15 2019
 
 * Ignore vsix files
