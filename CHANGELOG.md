@@ -3,6 +3,7 @@
 ## September, 04 2020
 
 * Support for Laravel 8.0 controllers PHP `Classname::class` notation
+* Update npm packages - vulnerabilities fixes
 
 ## February, 15 2019
 
