@@ -1,6 +1,6 @@
 # Change Log
 
-## 0.0.10 - September, 05 2020
+## 0.0.12 - September, 05 2020
 
 * Fixed a packaging issue made by the `vsce` tool as described at https://github.com/microsoft/vscode-vsce/issues/497
 
