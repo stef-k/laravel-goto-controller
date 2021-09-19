@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.0.15 - September, 19 2021
+
+* regression caused by v0.0.14
+
 ## 0.0.14 - September, 19 2021
 
 * [link.js] Do not perform checks on undefined lines of text
