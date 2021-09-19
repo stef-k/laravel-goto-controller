@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.0.14 - September, 19 2021
+
+* [link.js] Do not perform checks on undefined lines of text
+
 ## 0.0.12 - September, 05 2020
 
 * Fixed a packaging issue made by the `vsce` tool as described at https://github.com/microsoft/vscode-vsce/issues/497

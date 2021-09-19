@@ -7,7 +7,7 @@ export class LinkProvider implements DocumentLinkProvider {
   /**
  * provideDocumentLinks
  */
-  public provideDocumentLinks(document: TextDocument, token: CancellationToken): ProviderResult<DocumentLink[]> {
+  public provideDocumentLinks (document: TextDocument, token: CancellationToken): ProviderResult<DocumentLink[]> {
     let documentLinks = [];
     let index = 0;
     let reg = /(['"])[^'"]*\1/g;
@@ -40,20 +40,22 @@ export class LinkProvider implements DocumentLinkProvider {
         }
       }
       // check for ClassName::class notation
-      if (line.text.includes('::class')) {
-        let controllerName = line.text.substring(line.text.lastIndexOf('[') +1 ,line.text.lastIndexOf('::class'))
-        let functionName = line.text.split('::class, \'')[1].substring(0, line.text.split('::class, \'')[1].lastIndexOf('\''))
-        let functionCharacterStartsAt = line.text.lastIndexOf(line.text.split('::class, \'')[1][0])
-        let filePath = util.getFilePath(controllerName, document);
+      if (line.text) {
+        if (line.text.includes('::class')) {
+          let controllerName = line.text.substring(line.text.lastIndexOf('[') + 1, line.text.lastIndexOf('::class'))
+          let functionName = line.text.split('::class, \'')[1].substring(0, line.text.split('::class, \'')[1].lastIndexOf('\''))
+          let functionCharacterStartsAt = line.text.lastIndexOf(line.text.split('::class, \'')[1][0])
+          let filePath = util.getFilePath(controllerName, document);
 
-        if (filePath != null) {
-          let start = new Position(line.lineNumber, functionCharacterStartsAt);
-          let end = start.translate(0, functionName.length);
-          let documentLink = new util.LaravelControllerLink(new Range(start, end), filePath, controllerName, functionName);
-          documentLinks.push(documentLink);
+          if (filePath != null) {
+            let start = new Position(line.lineNumber, functionCharacterStartsAt);
+            let end = start.translate(0, functionName.length);
+            let documentLink = new util.LaravelControllerLink(new Range(start, end), filePath, controllerName, functionName);
+            documentLinks.push(documentLink);
+          }
         }
+        index++;
       }
-      index++;
     }
     return documentLinks;
   }
@@ -61,7 +63,7 @@ export class LinkProvider implements DocumentLinkProvider {
   /**
    * resolveDocumentLink
    */
-  public resolveDocumentLink(link: util.LaravelControllerLink, token: CancellationToken): ProviderResult<DocumentLink> {
+  public resolveDocumentLink (link: util.LaravelControllerLink, token: CancellationToken): ProviderResult<DocumentLink> {
     let lineNum = util.getLineNumber(link.funcName, link.filePath);
     let path = link.filePath;
     if (lineNum != -1)
