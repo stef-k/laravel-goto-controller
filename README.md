@@ -1,4 +1,10 @@
-# laravel-goto-controller README
+# No longer maintained
+
+I wanted to say that the extension is no longer maintained. I do not code often and if/when I code it is not on PHP - Laravel.
+
+The last couple of years commits where mostly for community's sake but since I am out of the loop I cannot commit to this project.
+
+## laravel-goto-controller README
 
 Alt + click to navigate from a route to a respective controller file.
 
